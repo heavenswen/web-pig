@@ -38,6 +38,7 @@ h3,
 h4,
 h5,
 h6{
+	font-size:inherit; 
 	font-weight:normal; 
 }
 input[type=radio],
@@ -162,13 +163,18 @@ video,
 	display: block;
 	margin: 0 auto;
 }
-
-
+.block{
+	display: block;
+}
+strong{
+	font-weight: 500;
+}
 /*page*/
 body{
 	font-family:'Microsoft YaHei',Arial, Helvetica, sans-serif;
 	//background: #333;
-	font-size:.32rem;
+	font-size:size(30,rem);
+	color: #2ab564;
 
 }
 figure{
@@ -184,28 +190,31 @@ img[data-src]{
 	opacity: 0
 }
 //内容宽
-$p02w:4.90rem;
+$p02w:size(555,rem);
 .swiper-slide{
 	position: relative;
 	background-size:cover;
 	background-repeat:no-repeat;  
 	background-color:#fff; 
+	background-image: url('../images/bg1.jpg');
 	transition: all .3s linear;
 	//opacity: 0;
 	&>p,&>.title,&>.box,&>.container{
 		margin: auto;
 	}
-	.container,.title{
+	.container{
 		width: $p02w;
 	}
 	.title{
-			font-size: 0.6rem;
-			font-weight: 500;
-			color: #2e75b6;
-			margin-top: .2rem;
+		margin-top: size(45,rem);
+		font-size: size(60,rem); 
+		text-align: center;
+		h5{
+		font-size: size(60,rem); 			
 		}
-	.animated{
-		//animation-play-state:paused;
+		strong{
+			font-size:size(80,rem); 
+		}
 	}
 	&.swiper-slide-active{
 		
@@ -222,291 +231,145 @@ $p02w:4.90rem;
 .box a{
 	display: inline-block;
 }
-
-.page01,.page11{
-	background-image: url('../img/page01.jpg');
+//动画无限循环
+.loop{
+	animation-iteration-count:infinite;
 }
-.page02,.page10,.page08,.page07{
-	background-image: url('../images/page02.jpg');
-}
-.page03,.page09,.page06,.page05,.page04{
-	background-image: url('../images/page03.jpg');
+@for $i from 1 to 20{
+	.delay#{$i}{
+		animation-delay:.3*$i+s; 
+	}
+} 
+//icon list
+.list{
+	li{
+		i,span,a{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span,a{
+			width: size(385,rem);
+		}
+		i{
+			width:size(65,rem);
+			height: size(65,rem);
+			background-size:size(65,rem);
+			background-position:left top;  
+			background-repeat:no-repeat;
+			margin-right: size(20,rem);
+		}
+	}
 }
 .page01{
 	//background-image: url('../img/page01.jpg');
-	
-	.p01-title{
-		width: 5.47rem;
-		margin-top: 1rem;
+	.p01-2{
+		margin-top: size(93,rem);
 	}
-	.p01-v{
-		margin-top: 4rem;
-		width: 5rem;
-		margin-left: 0;
-
-		&.animated{
-			animation-delay: .3s;
-		}
-	}
-	.p01-name{
-		margin-top: 1rem;
-		width: 3.28rem;
-		&.animated{
-			animation-delay: .5s;
-		}
+	.p01-3 {
+		margin-top: size(45,rem);
+		font-size: size(40,rem);
 	}
 }
 //about
+.page02,.page03,.page04,.page05,.page06,.page07,.page08{
+	>.title{margin-bottom:size(44,rem); }
+}
 .page02{
 	//background-image: url('../images/page02.jpg');
-	.p02-img{
-		width: $p02w;
-		margin-top: 1.38rem;
-		&.animated{
-			animation-delay: .3s;
-		}		
-	}
-	.font-plus{
-		margin-top: 1.33rem;
-		margin-bottom: .98rem;
-		&>span{
-		color: #fbcd63;
-			
-		}
-		&.animated{
-			animation-delay: .5s;
-		}
-	}
-	.container{
-&.animated{
-			animation-delay: .8s;
-		}
-	}
-	p{
-		display: block;
-		width: $p02w;
+	.p02-3{
+		margin-top:size(44,rem); 
 	}
 }
 //展现形式
 .page03{
-	.title{
-		margin-bottom: .6rem;
+	.p03-3{
+		height: size(246,rem);
+		padding-top:size(10,rem);
+		background-image:url(../images/c3.png);
+		background-size:100%;
+
+		li{
+			line-height: 1.2;
+			margin-bottom: size(3,rem);
+			width: size(200,rem);
+			&:nth-of-type(odd){
+				text-align: right;
+				margin-left:size(140,rem); 
+			}	
+			&:nth-of-type(even){
+				text-align: left;
+				margin-left:size(387,rem);
+			}
+		}  
 	}
 	.box{
-		width: 3.50rem;
 		margin-bottom: .24rem;
 		h3{
 			margin-top: .1rem;
 			font-size:.32rem;
 		}
 	}
-	.box:nth-of-type(1){
-		&.animated{
-			animation-delay: .3s;
-		}
-	}
-	.box:nth-of-type(2){
-		&.animated{
-			animation-delay: .5s;
-		}
-	}
 }
-//传播场景
-.page04,.page05,.page06{
-	.title{
-		margin-bottom: .65rem;
-		&>ul{
-			display: inline-block;
-			font-size: .24rem;
-
-
-		}
+.page04{
+	.p04-2{
+		margin-bottom: size(60,rem);
 	}
-	.top{
-		font-size: 0;
-		margin-bottom:.44rem;
-		.box{
-			width: .7rem;
-			vertical-align: top;
-			display: inline-block;
-			
-		}
-		.text{
-			text-align: center;
-			font-size:.22rem;
-			margin-top:.1rem;
-		}
-
-	}
-	.container{
-		.p04-1 , .p04-3 ,.p04-4{
-				width: 2.10rem;
-			}
-		.p04-1.delay{
-			animation-delay: .5s
-		}	
-		.p04-2{
-			animation-delay: 1.5s
-		}
-		.p04-3{
-			animation-delay: 1s
-		}
-		.p04-t{
-			animation-delay: 3.5s
-		}
-		.p04-4{
-			animation-delay: 4.5s
-		}	
-	}
-	
-	.bottom{
-		font-size: 0;
-		
-		&>.box{
-			vertical-align:top;
-			display: inline-block;
-			font-size:.22rem;
-		
-		}
-		.text{
-			width: 2.78rem;
-		}
-		p{
-			margin: auto;
-			display: block;
-			width: 1.8rem;
-			&:first-child{
-				padding-top: .44rem;
-				margin-bottom: .2rem;
-			}
-		}
-	}
-}
-
-.box.img-box{
-		position: relative;
-		.p04-3-1{
-			position: absolute;
-			left: .22rem;
-			top:.61rem;
-			margin: auto;
-			width: 1.52rem;
-			opacity: 0;
-		}
-		.p05-1-1{
-			left: .29rem;
-		}
 }
 .page05{
-	.title{
-		margin-bottom:2.55rem;
+	.p05-3{
+		margin-top: size(57,rem);
+		width: size(363,rem);
 	}
 }
-//标题
-.page09,.page08,.page07{
-	.title{
-			margin-bottom: .81rem;
-	}
-}
-
-//产品优势
-.page07{
-
-	li{
-		margin-bottom: .65rem;
-	}
-	@for $i from 1 to 5 { 
-		.item-#{$i} { 
-			&.animated{
-				animation-delay: .4*$i+s;
-			}
-		} 
-	
-	}
-	img{
-		display: inline-block;
-		vertical-align: middle;
-		width: .85rem;
-	}
-}
-//场景
-.page08{
-	
-	.box{
-		position: relative;
-		.img-right{
-			position: absolute;
-			top:1.1rem;
-			right: 0;
-			width:1.1rem;
-
+//后续服务
+.page06{
+	.p06-2{
+		margin-bottom: size(37,rem);
+		i{
+			
+			margin-bottom:size(10,rem); 
 		}
-	}
-	@for $i from 1 to 3 { 
-		.item-#{$i} { 
-			&.animated{
-				animation-delay: .4*$i+s;
+		li{	
+			@for $i from 1 to 6{
+				&:nth-of-type(#{$i}) i{
+					background-image:url('../images/c6_#{$i}.png'); 
+				} 
 			}
-		} 
-	}
-	.item-3,.item-4{
-		&.animated{
-			animation-delay: 1.2s;
 		}
-	}
-}
-//流程
-.page09{
-	@for $i from 1 to 6 { 
-		.box:nth-of-type(#{$i}){ 
-			&.animated{
-				animation-delay: .4*$i+s;
-			}
-		} 
-	}
-
-}
-//企业
-.page10{
-	.title{
-		margin-bottom:1.01rem;
-
-	}
-	@for $i from 1 to 4{ 
-		.item-#{$i}{ 
-			&.animated{
-				animation-delay: .4*$i+s;
-			}
-		} 
-	}
-	.text-center,.box{
-		margin-bottom:.45rem; 
-	}
-}
-.page11{
-	.mask{
-		position: absolute;
-		left: 0;
-		top:0;
-		width: 100%;
-		height: 100%;
-		background-color:rgba(32,56,100,.8) 
-	}
-	.box{
-		position: relative;
-		z-index: 1;
-	}
-	.box.ty{
-		margin-top: 3.65rem;
-		margin-bottom: .68rem;
 		
 	}
-	.animated{
-		animation-delay:-5s;
-		animation-duration:10s;
+	.p06-3{
+		font-size: 0;
+		img{
+			display: inline-block;
+			width: 50%;
+		}
+		margin-bottom: size(30,rem);
 	}
-	.name{
-		width: 3.28rem;
-		height: .48rem;
+	
+}
+
+.page07{
+	background-image:url(../images/bg2.jpg); 
+	
+}
+
+.page08{
+	[data-animate]{
+		animation-delay:-8s;
+		animation-duration:30s; 
 	}
+	li{
+		margin-bottom: size(50,rem);
+		@for $i from 1 to 5{
+			&:nth-of-type(#{$i}) i{
+				background-image:url('../images/c8_#{$i}.png'); 
+			}
+		}
+
+	}
+	.img{
+		width: size(224,rem); margin: auto;
+	}
+	
 }
