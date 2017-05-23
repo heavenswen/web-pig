@@ -92,7 +92,8 @@ import Swiper from "swiper"
     // 如果需要分页器
     // pagination: '.swiper-pagination',
     preloadImages: false,
-    lazyLoading: true,
+   // lazyLoading: true,
+   //href list
     hashnav: true,
     onInit(swiper) {
       //第一次不会触发transitioned ，手动检测
