@@ -1,0 +1,512 @@
+@import "~./_common.scss";  
+
+
+/*
+ pc.css
+ * */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+span,
+strong,
+input,
+select,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	outline: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-weight:normal; 
+}
+input[type=radio],
+input[type=checkbox],
+a {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	background: transparent;
+	color: inherit;
+	font-size: inherit
+}
+
+a img {
+	border: 0 none;
+}
+
+.box img {
+	vertical-align: bottom;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+a,
+button,
+input[type=checkbox],
+input[type=radio] {
+	cursor: pointer;
+}
+
+html {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+audio,
+canvas,
+progress,
+video,
+.row {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+
+.row {
+	clear: both;
+	width: 100%;
+}
+
+*:after {
+	content: '';
+	clear: both;
+	height: 0;
+}
+
+
+/*font*/
+.normal {
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: 500;
+}
+.font-sm{
+		font-size: .22rem;
+	}
+.font-white {
+	color: #fff;
+}
+
+.font-blue {
+	color: #2e75b6;
+}
+
+.font-red {
+	color: #f66;
+}
+
+.font-orange {
+	color: #ff9600;
+}
+
+
+/*container*/
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.img-box img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/*page*/
+body{
+	font-family:'Microsoft YaHei',Arial, Helvetica, sans-serif;
+	//background: #333;
+	font-size:.32rem;
+
+}
+figure{
+	margin:0;
+}
+
+html,body,
+.page{
+	width:100%;
+	height:100%;
+}
+img[data-src]{
+	opacity: 0
+}
+//内容宽
+$p02w:4.90rem;
+.swiper-slide{
+	position: relative;
+	background-size:cover;
+	background-repeat:no-repeat;  
+	background-color:#fff; 
+	transition: all .3s linear;
+	//opacity: 0;
+	&>p,&>.title,&>.box,&>.container{
+		margin: auto;
+	}
+	.container,.title{
+		width: $p02w;
+	}
+	.title{
+			font-size: 0.6rem;
+			font-weight: 500;
+			color: #2e75b6;
+			margin-top: .2rem;
+		}
+	.animated{
+		//animation-play-state:paused;
+	}
+	&.swiper-slide-active{
+		
+		.animated{
+			//animation-fill-mode:forwards;//保存在最后一帧
+			//animation-play-state:running;
+		}
+	}
+	[data-animate]{
+		opacity: 0;
+	}
+
+}
+.box a{
+	display: inline-block;
+}
+
+.page01,.page11{
+	background-image: url('../img/page01.jpg');
+}
+.page02,.page10,.page08,.page07{
+	background-image: url('../images/page02.jpg');
+}
+.page03,.page09,.page06,.page05,.page04{
+	background-image: url('../images/page03.jpg');
+}
+.page01{
+	//background-image: url('../img/page01.jpg');
+	
+	.p01-title{
+		width: 5.47rem;
+		margin-top: 1rem;
+	}
+	.p01-v{
+		margin-top: 4rem;
+		width: 5rem;
+		margin-left: 0;
+
+		&.animated{
+			animation-delay: .3s;
+		}
+	}
+	.p01-name{
+		margin-top: 1rem;
+		width: 3.28rem;
+		&.animated{
+			animation-delay: .5s;
+		}
+	}
+}
+//about
+.page02{
+	//background-image: url('../images/page02.jpg');
+	.p02-img{
+		width: $p02w;
+		margin-top: 1.38rem;
+		&.animated{
+			animation-delay: .3s;
+		}		
+	}
+	.font-plus{
+		margin-top: 1.33rem;
+		margin-bottom: .98rem;
+		&>span{
+		color: #fbcd63;
+			
+		}
+		&.animated{
+			animation-delay: .5s;
+		}
+	}
+	.container{
+&.animated{
+			animation-delay: .8s;
+		}
+	}
+	p{
+		display: block;
+		width: $p02w;
+	}
+}
+//展现形式
+.page03{
+	.title{
+		margin-bottom: .6rem;
+	}
+	.box{
+		width: 3.50rem;
+		margin-bottom: .24rem;
+		h3{
+			margin-top: .1rem;
+			font-size:.32rem;
+		}
+	}
+	.box:nth-of-type(1){
+		&.animated{
+			animation-delay: .3s;
+		}
+	}
+	.box:nth-of-type(2){
+		&.animated{
+			animation-delay: .5s;
+		}
+	}
+}
+//传播场景
+.page04,.page05,.page06{
+	.title{
+		margin-bottom: .65rem;
+		&>ul{
+			display: inline-block;
+			font-size: .24rem;
+
+
+		}
+	}
+	.top{
+		font-size: 0;
+		margin-bottom:.44rem;
+		.box{
+			width: .7rem;
+			vertical-align: top;
+			display: inline-block;
+			
+		}
+		.text{
+			text-align: center;
+			font-size:.22rem;
+			margin-top:.1rem;
+		}
+
+	}
+	.container{
+		.p04-1 , .p04-3 ,.p04-4{
+				width: 2.10rem;
+			}
+		.p04-1.delay{
+			animation-delay: .5s
+		}	
+		.p04-2{
+			animation-delay: 1.5s
+		}
+		.p04-3{
+			animation-delay: 1s
+		}
+		.p04-t{
+			animation-delay: 3.5s
+		}
+		.p04-4{
+			animation-delay: 4.5s
+		}	
+	}
+	
+	.bottom{
+		font-size: 0;
+		
+		&>.box{
+			vertical-align:top;
+			display: inline-block;
+			font-size:.22rem;
+		
+		}
+		.text{
+			width: 2.78rem;
+		}
+		p{
+			margin: auto;
+			display: block;
+			width: 1.8rem;
+			&:first-child{
+				padding-top: .44rem;
+				margin-bottom: .2rem;
+			}
+		}
+	}
+}
+
+.box.img-box{
+		position: relative;
+		.p04-3-1{
+			position: absolute;
+			left: .22rem;
+			top:.61rem;
+			margin: auto;
+			width: 1.52rem;
+			opacity: 0;
+		}
+		.p05-1-1{
+			left: .29rem;
+		}
+}
+.page05{
+	.title{
+		margin-bottom:2.55rem;
+	}
+}
+//标题
+.page09,.page08,.page07{
+	.title{
+			margin-bottom: .81rem;
+	}
+}
+
+//产品优势
+.page07{
+
+	li{
+		margin-bottom: .65rem;
+	}
+	@for $i from 1 to 5 { 
+		.item-#{$i} { 
+			&.animated{
+				animation-delay: .4*$i+s;
+			}
+		} 
+	
+	}
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		width: .85rem;
+	}
+}
+//场景
+.page08{
+	
+	.box{
+		position: relative;
+		.img-right{
+			position: absolute;
+			top:1.1rem;
+			right: 0;
+			width:1.1rem;
+
+		}
+	}
+	@for $i from 1 to 3 { 
+		.item-#{$i} { 
+			&.animated{
+				animation-delay: .4*$i+s;
+			}
+		} 
+	}
+	.item-3,.item-4{
+		&.animated{
+			animation-delay: 1.2s;
+		}
+	}
+}
+//流程
+.page09{
+	@for $i from 1 to 6 { 
+		.box:nth-of-type(#{$i}){ 
+			&.animated{
+				animation-delay: .4*$i+s;
+			}
+		} 
+	}
+
+}
+//企业
+.page10{
+	.title{
+		margin-bottom:1.01rem;
+
+	}
+	@for $i from 1 to 4{ 
+		.item-#{$i}{ 
+			&.animated{
+				animation-delay: .4*$i+s;
+			}
+		} 
+	}
+	.text-center,.box{
+		margin-bottom:.45rem; 
+	}
+}
+.page11{
+	.mask{
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(32,56,100,.8) 
+	}
+	.box{
+		position: relative;
+		z-index: 1;
+	}
+	.box.ty{
+		margin-top: 3.65rem;
+		margin-bottom: .68rem;
+		
+	}
+	.animated{
+		animation-delay:-5s;
+		animation-duration:10s;
+	}
+	.name{
+		width: 3.28rem;
+		height: .48rem;
+	}
+}

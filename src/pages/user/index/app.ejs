@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <title>传信通介绍</title>
+  <%= require(`../../common/_meta.html`) %>
+</head>
+
+<body>
+  <div class="swiper-container page">
+    <div class="swiper-wrapper">
+      <!-- 01-->
+      <section class="swiper-slide  page01 " data-history="1">
+        <div class="swiper-lazy-preloader"></div>
+        <div class='box p01-title  ' data-animate='animated bounceInDown'>
+          <img class="swiper-lazy " data-src="<%= require(`assets/images/p01-title.png`) %>" alt="传信通">
+        </div>
+        <div class="box p01-v " data-animate='animated bounceInLeft'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p01-v.png`) %>" alt="传信通产品">
+        </div>
+        <div class="box p01-name " data-animate='animated bounceInUp'>
+          <img class='swiper-lazy ' data-src="<%= require(`assets/images/p01-name.png`) %>" alt="厦门昊广信息科技">
+        </div>
+      </section>
+      <!--02-->
+      <section class="swiper-slide  page02 " data-history="2">
+        <div class="swiper-lazy-preloader"></div>
+        <h1 class=" title  " data-animate=' animated bounceInRight'>传信通是什么</h1>
+        <div class="box p02-img " data-animate=' animated bounceInRight'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p02-title.png`) %>" alt="营销工具">
+        </div>
+        <p class='font-plus bold ' data-animate=' animated bounceInRight'>
+          通过<span>接口平台</span>让企业即时定制图文内容，实现在<span>通话行为触发</span>后，以弹屏、彩信或短信为传播介质，达到<span>精准传播</span>的工具
+        </p>
+        <div class='container  ' data-animate=' animated bounceInRight'>
+          <p class='font-sm'>
+            弹屏释义：
+          </p>
+          <p class='font-sm'>
+            弹屏即USSD，是一种新型基于GSM网络的交互式数据业务。无需安装第三方软件，不产生流量费用，不会被手机型号、系统或软件限制和拦截，且一旦触发弹出后就显示在手机第一屏，需用户手动关闭才能进行手机屏幕的其它操作。
+          </p>
+        </div>
+
+      </section>
+      <!--03-->
+      <section class="swiper-slide page03 " data-history="3">
+        <div class="swiper-lazy-preloader"></div>
+        <h2 class="title" data-animate='animated swing'>展现形式</h2>
+        <div class="box text-center " data-animate='animated  rubberBand'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p03-img.png`) %>" alt="苹果弹屏,彩信">
+          <h3>ios弹屏,彩信</h3>
+        </div>
+        <div class="box text-center " data-animate='animated  rubberBand '>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p03-img2.png`) %>" alt="Android弹屏,彩信">
+          <h3>安卓弹屏,彩信</h3>
+        </div>
+      </section>
+      <!--04-->
+      <section class="swiper-slide page04 " data-history="4">
+        <div class="swiper-lazy-preloader"></div>
+        <h1 class=" title" data-animate='animated swing'>传播场景
+          <ul>
+            <li>被叫方开通</li>
+            <li>主叫方未开通</li>
+          </ul>
+        </h1>
+        <div class='container top'>
+          <section class='box p04-1' id='p4-1' data-animate='animated fadeInRight delay'>
+            <div class="my-gallery" data-pswp-uid="4-1">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-20.png`) %>" alt="">
+              </figure>
+            </div>
+            <h3 class='text'>被叫方屏显</h3>
+          </section>
+          <section class='box p04-2 ' id='p4-2' data-animate=' animated fadeInRight'>
+
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p04-2.png`) %>" alt="">
+
+
+          </section>
+          <section class='box p04-3 img-box' id='p4-3' data-animate='animated fadeInRight'>
+            <div class="my-gallery" data-pswp-uid="4-3">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-2.png`) %>" alt="">
+              </figure>
+            </div>
+            <div class="my-gallery" data-pswp-uid="4-3-1">
+              <figure>
+                <img class='swiper-lazy p04-3-1' data-animate id='p04-3-1' data-src="<%= require(`assets/images/p04-3-1.jpg`) %>" alt="">
+              </figure>
+            </div>
+            <h3 class='text'>主叫方屏显</h3>
+          </section>
+        </div>
+        <div class='container bottom'>
+          <section class="box text p04-t " data-animate='animated fadeInLeft' id='p04-t'>
+
+            <p>
+              通话初接收弹屏，挂机后接收到以<span class="font-blue">被叫方手机号码</span>发送过来的彩信。
+            </p>
+            <p>
+              弹屏和彩信内容：被叫方定制的传播内容
+            </p>
+          </section>
+          <section class="box my-gallery  p04-4 " data-animate='animated fadeInRight' id='p04-4' data-pswp-uid="4-4">
+            <figure>
+              <img class='swiper-lazy' data-src="<%= require(`assets/images/p04-4.png`) %>" alt="">
+            </figure>
+          </section>
+        </div>
+      </section>
+      <!--05-->
+      <section class="swiper-slide page05" data-history="5">
+        <div class="swiper-lazy-preloader"></div>
+        <h1 class='title ' data-animate='animated swing'>传播场景
+          <ul>
+            <li>主叫方开通</li>
+            <li>被叫方未开通</li>
+          </ul>
+        </h1>
+        <div class='container top'>
+          <section class='box  p04-1 img-box ' data-animate='animated fadeInRight' id="p5-1">
+            <div class="my-gallery" data-pswp-uid="5-1">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-20.png`) %>" alt="">
+              </figure>
+            </div>
+            <div class="my-gallery" data-pswp-uid="5-1-1">
+              <figure>
+                <img class='swiper-lazy p04-3-1 p05-1-1' data-animate id='p05-1-1' data-src="<%= require(`assets/images/p05-1-1.jpg`) %>"
+                  alt="">
+              </figure>
+            </div>
+            <h3 class='text'>被叫方屏显</h3>
+          </section>
+          <section class='box  p04-2 ' data-animate='animated fadeInRight' id="p5-2">
+            <div class="my-gallery" data-pswp-uid="5-2">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p04-2.png`) %>" alt="">
+              </figure>
+            </div>
+          </section>
+          <section class='box  p04-3 ' data-animate='animated fadeInRight' id="p5-3">
+            <div class="my-gallery" data-pswp-uid="5-2">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-2.png`) %>" alt="">
+              </figure>
+            </div>
+            <h3 class='text'>主叫方屏显</h3>
+          </section>
+        </div>
+      </section>
+      <!--06-->
+      <section class="swiper-slide page06" data-history="6">
+        <div class="swiper-lazy-preloader"></div>
+        <h1 class=" title " data-animate='animated swing'>传播场景
+          <ul>
+            <li>&nbsp</li>
+            <li>主叫被叫均开通</li>
+          </ul>
+        </h1>
+        <div class='container top'>
+          <section class='box  p04-1 img-box ' data-animate='animated fadeInRight' id="p6-1">
+            <div class="my-gallery" data-pswp-uid="6-1">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-20.png`) %>" alt="">
+              </figure>
+            </div>
+            <div class="my-gallery" data-pswp-uid="6-1-1">
+              <figure>
+                <img class='swiper-lazy p04-3-1 p05-1-1' data-animate id='p06-1-1' data-src="<%= require(`assets/images/p05-1-1.jpg`) %>"
+                  alt="">
+              </figure>
+            </div>
+            <h3 class='text'>被叫方屏显</h3>
+          </section>
+          <section class='box p04-2' id="p6-2" data-animate='animated fadeInRight'>
+
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p04-2.png`) %>" alt="">
+
+          </section>
+          <section class='box p04-3  img-box' data-animate='animated fadeInRight' id='p6-3'>
+            <div class="my-gallery" data-pswp-uid="6-3">
+              <figure>
+                <img class='swiper-lazy' data-src="<%= require(`assets/images/p05-2.png`) %>" alt="">
+              </figure>
+            </div>
+            <div class="my-gallery" data-pswp-uid="6-3-1">
+              <figure>
+                <img class='swiper-lazy p04-3-1 ' id='p06-3-1' data-animate data-src="<%= require(`assets/images/p04-3-1.jpg`) %>" alt="">
+              </figure>
+            </div>
+            <h3 class='text'>主叫方屏显</h3>
+          </section>
+        </div>
+        <div class='container bottom'>
+          <section class="box text p04-t" data-animate='animated fadeInLeft' id="p6-4">
+
+            <p>
+              通话初接收弹屏，挂机后接收到以<span class="font-blue">被叫方手机号码</span>发送过来的彩信。
+            </p>
+            <p>
+              弹屏和彩信内容：被叫方定制的传播内容
+            </p>
+          </section>
+          <section class="box  p04-4 my-gallery" data-pswp-uid="6-4" data-animate='animated fadeInRight' id="p6-5">
+            <figure>
+              <img class='swiper-lazy' data-src="<%= require(`assets/images/p04-4.png`) %>" alt="">
+            </figure>
+          </section>
+        </div>
+      </section>
+      <section class="swiper-slide page07 " data-history="7">
+        <div class="swiper-lazy-preloader"></div>
+        <h2 class=" title " data-animate='animated rotateInUpLeft'>产品优势</h2>
+        <ul class='container'>
+          <li class="item-1" data-animate=' animated rotateInUpLeft'>
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p07-1.png`) %>" alt="" /> 极高到达率及转化率
+          </li>
+          <li class='item-2 ' data-animate=' animated rotateInUpLeft'>
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p07-2.png`) %>" alt="" /> 超低成本
+          </li>
+          <li class=' item-3 ' data-animate=' animated rotateInUpLeft'>
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p07-3.png`) %>" alt="" /> 电信级稳定并发通道
+          </li>
+          <li class="item-4 " data-animate=' animated rotateInUpLeft'>
+            <img class='swiper-lazy' data-src="<%= require(`assets/images/p07-4.png`) %>" alt="" /> 灵活、精准、泛行业
+          </li>
+        </ul>
+
+      </section>
+      <!--08-->
+      <section class="swiper-slide page08 " data-history="8">
+        <div class="swiper-lazy-preloader"></div>
+        <h2 class=" title" data-animate='animated swing'>传播场景</h2>
+        <div class="item-1 box " data-animate='animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p08-1.png`) %>" alt="" />
+        </div>
+        <div class="box">
+          <img class='item-2 swiper-lazy' data-animate='animated rotateIn' data-src="<%= require(`assets/images/p08-2.png`) %>" alt=""
+          />
+          <img class='item-3 swiper-lazy img-right' data-animate='animated bounceInDown' data-src="<%= require(`assets/images/p08-4.png`) %>"
+            alt="" />
+        </div>
+        <div class="box">
+          <img class='item-4 swiper-lazy ' data-animate='animated bounceInDown' data-src="<%= require(`assets/images/p08-3.png`) %>"
+            alt="" />
+        </div>
+      </section>
+      <!--09-->
+      <section class="swiper-slide page09 " data-history="9">
+        <div class="swiper-lazy-preloader"></div>
+        <h2 class=" title" data-animate=' animated swing'>企业设定流程</h2>
+        <div class="box  " data-animate='animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p09-1.png`) %>" alt="" />
+        </div>
+        <div class="box " data-animate=' animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p09-2.png`) %>" alt="" />
+        </div>
+        <div class="box " data-animate=' animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p09-3.png`) %>" alt="" />
+        </div>
+        <div class="box" data-animate='animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p09-4.png`) %>" alt="" />
+        </div>
+        <div class="box  " data-animate='animated bounceInDown'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p09-5.png`) %>" alt="" />
+        </div>
+      </section>
+      <!--10-->
+      <section class="swiper-slide page10 " data-history="10">
+        <div class="swiper-lazy-preloader"></div>
+        <h2 class=" title" data-animate='animated swing'>企业设定流程</h2>
+        <h3 class='text-center item-1 ' data-animate=' animated fadeInLeftBig'>传信通系列产品价格表</h3>
+        <div class="box my-gallery" data-pswp-uid="11">
+          <figure>
+            <img class='swiper-lazy item-2 ' data-animate='animated fadeInLeftBig' data-src="<%= require(`assets/images/p10.png`) %>"
+              alt="" />
+          </figure>
+        </div>
+        <ul class='container font-sm item-3  ' data-animate='animated fadeInLeftBig'>
+          <h5> 注：</h5>
+          <li>1.实时计费，自动跨档，跨档后当月所有发送量按　新阶梯价重新计算。</li>
+          <li>2.默认为彩信形式，部分地区或运营商，自动路由　为短信形式展现。</li>
+          <li>3.群发助手，后续依据政策要求审核开通。
+          </li>
+        </ul>
+      </section>
+      <section class="swiper-slide page11 " data-history="11">
+        <div class="swiper-lazy-preloader"></div>
+        <div class="mask"></div>
+        <div class="box ty " data-animate='animated fadeInUpBig'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p11.png`) %>" alt="" />
+        </div>
+        <div class="box name" data-animate='animated fadeInUpBig'>
+          <img class='swiper-lazy' data-src="<%= require(`assets/images/p01-name.png`) %>" alt="" />
+        </div>
+      </section>
+    </div>
+    <!-- 如果需要分页器 -->
+    <!--<div class="swiper-pagination"></div>-->
+  </div>
+  <!--zoom-->
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <section class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <!--<button class="pswp__button pswp__button--share" title="Share"></button>-->
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+</body>
+
+</html>
