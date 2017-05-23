@@ -92,8 +92,8 @@ import Swiper from "swiper"
     // 如果需要分页器
     // pagination: '.swiper-pagination',
     preloadImages: false,
-   // lazyLoading: true,
-   //href list
+    lazyLoading: true,
+    //href list
     hashnav: true,
     onInit(swiper) {
       //第一次不会触发transitioned ，手动检测
@@ -104,7 +104,7 @@ import Swiper from "swiper"
       }
     },
     onSlideChangeStart(swiper) {
-      let index = swiper.activeIndex+1
+      let index = swiper.activeIndex + 1
       let index_p = swiper.previousIndex + 1 //上一屏
       //addClass 
       pageAddClass(index);
