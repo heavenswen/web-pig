@@ -86,8 +86,8 @@ import Swiper from "swiper"
     }
 
   }
-
-  var mySwiper = new Swiper('.swiper-container', {
+  let status = ''
+  const mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     // 如果需要分页器
     // pagination: '.swiper-pagination',
@@ -103,13 +103,13 @@ import Swiper from "swiper"
         pageAddClass(index)
       }
     },
-    onSlideChangeStart(swiper) {
+    onTransitionEnd(swiper) {
       let index = swiper.activeIndex + 1
       let index_p = swiper.previousIndex + 1 //上一屏
+      if (index_p == index) return
       //addClass 
       pageAddClass(index);
       //init animate the prev swiper 
-      if (index_p == index) return
       let parent_p = ".page" + (index_p >= 10 ? index_p : '0' + index_p)
       let objs_p = document.querySelectorAll(parent_p + " [data-animate]")
       //remove class 
@@ -118,16 +118,20 @@ import Swiper from "swiper"
         o.style.opacity = "0"
         initAnimate(o)
       }
-    }
+    },
   })
-
+  document.querySelector(".goto").addEventListener("click", function () {
+    mySwiper.slideTo(1, 1000);//切换到第一个slide，速度为1秒
+  }, false)
   //后续动画
   const again = document.querySelectorAll("[data-again]");
   for (let i = 0; i < again.length; i++) {
     let obj = again[i]
     obj.addEventListener(animatend, function () {
       let cl = this.dataset.again
-      objAddClass(this, cl)
+      let reg = /animated(.*)/
+      let clName = this.className
+      if (!clName.match(reg)) objAddClass(this, cl)
     }, false)
   }
 

@@ -189,6 +189,20 @@ html,body,
 img[data-src]{
 	opacity: 0
 }
+.xy{
+	animation-name: xy;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+}
+@keyframes xy{
+0%,100%{
+	transform: translate3d(0,0,0) scale(1);
+}
+50%{
+	transform: translate3d(5%,5%,0) scale(.9);
+}
+}
+
 //内容宽
 $p02w:size(555,rem);
 .swiper-slide{
@@ -199,11 +213,37 @@ $p02w:size(555,rem);
 	background-image: url('../images/bg1.jpg');
 	transition: all .3s linear;
 	//opacity: 0;
+	&::before{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 100%;
+		height: size(183,rem);
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-image:url(../images/bg_b.png);   
+		opacity: .3;
+	}
 	&>p,&>.title,&>.box,&>.container{
 		margin: auto;
 	}
 	.container{
 		width: $p02w;
+	}
+	.box-center{
+		width: size(540,rem);
+	}
+	>.xy{
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background-image:url("../images/mask.png");
+		background-size:cover;
+		background-position: top center;
+		background-repeat:no-repeat;
 	}
 	.title{
 		margin-top: size(45,rem);
@@ -224,6 +264,8 @@ $p02w:size(555,rem);
 		}
 	}
 	[data-animate]{
+		position: relative;
+		z-index: 1;
 		opacity: 0;
 	}
 
@@ -248,7 +290,7 @@ $p02w:size(555,rem);
 			vertical-align: middle;
 		}
 		span,a{
-			width: size(385,rem);
+			width: size(400,rem);
 		}
 		i{
 			width:size(65,rem);
@@ -259,6 +301,7 @@ $p02w:size(555,rem);
 			margin-right: size(20,rem);
 		}
 	}
+	
 }
 .page01{
 	//background-image: url('../img/page01.jpg');
@@ -268,6 +311,11 @@ $p02w:size(555,rem);
 	.p01-3 {
 		margin-top: size(45,rem);
 		font-size: size(40,rem);
+	}
+	.goto{
+		padding-top: size(20,rem);
+		display: inline-block;
+		transform: rotate(90deg);
 	}
 }
 //about
@@ -282,15 +330,15 @@ $p02w:size(555,rem);
 }
 //展现形式
 .page03{
+
 	.p03-3{
 		height: size(246,rem);
-		padding-top:size(10,rem);
 		background-image:url(../images/c3.png);
 		background-size:100%;
-
+		background-repeat:no-button; 
 		li{
-			line-height: 1.2;
-			margin-bottom: size(3,rem);
+			line-height: 1;
+			padding-top: size(11,rem);
 			width: size(200,rem);
 			&:nth-of-type(odd){
 				text-align: right;
@@ -318,7 +366,7 @@ $p02w:size(555,rem);
 .page05{
 	.p05-3{
 		margin-top: size(57,rem);
-		width: size(363,rem);
+		width: size(368,rem);
 	}
 }
 //后续服务
@@ -356,8 +404,8 @@ $p02w:size(555,rem);
 
 .page08{
 	[data-animate]{
-		animation-delay:-8s;
-		animation-duration:30s; 
+		//animation-delay:-8s;
+		animation-duration:2s; 
 	}
 	li{
 		margin-bottom: size(50,rem);
