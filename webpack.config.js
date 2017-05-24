@@ -8,7 +8,7 @@ const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const release = process.env.NODE_ENV === 'production' ? '/pig/' : '/'//域名文件夹
-const myHost = "192.168.4.30"
+const myHost = "127.0.0.1"
 //页面对应路口
 const entries = {}
 //入口对象集
