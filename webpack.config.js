@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const release = process.env.NODE_ENV === 'production' ? '/pig/' : '/'//域名文件夹
+const release = process.env.NODE_ENV === 'production' ? '/pig2/' : '/'//域名文件夹
 const myHost = "192.168.4.30"
 //页面对应路口
 const entries = {}
