@@ -169,14 +169,14 @@ video,
 strong{
 	font-weight: 500;
 }
-// @font-face { 
-//   font-family: mz;       /*这里是说明调用来的字体名字*/ 
-//   src: url('mz.ttf');   /*这里是字体文件路径*/ 
-// }
+@font-face { 
+  font-family: mz;       /*这里是说明调用来的字体名字*/ 
+  src: url('mz.ttf');   /*这里是字体文件路径*/ 
+}
 /*page*/
 body{
-	font-family:'Microsoft YaHei',Arial, Helvetica, sans-serif;
-	//font-family:mz,Arial, Helvetica, sans-serif;
+	//font-family:'Microsoft YaHei',Arial, Helvetica, sans-serif;
+	font-family:mz,Arial, Helvetica, sans-serif;
 	//background: #333;
 	font-size:size(30,rem);
 	color: #2ab564;
@@ -245,6 +245,7 @@ $p02w:size(555,rem);
 		top:0;
 		width: 100%;
 		height: 100%;
+		pointer-events: none;
 		background-image:url("../images/mask.png");
 		background-size:cover;
 		background-position: top center;
@@ -269,10 +270,11 @@ $p02w:size(555,rem);
 		}
 	}
 	[data-animate]{
-		position: relative;
-		z-index: 1;
+		//position: relative;
+		//z-index: 1;
 		opacity: 0;
 	}
+
 
 }
 .box a{
@@ -318,14 +320,30 @@ $p02w:size(555,rem);
 		font-size: size(40,rem);
 	}
 	.goto{
-		padding-top: size(20,rem);
+		position: absolute;
+		bottom: 10%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: size(40,rem);
 		display: inline-block;
-		transform: rotate(90deg);
+		span{
+			transform: rotate(90deg);
+			display: block;
+			width: 100%;
+			height: size(40,rem);
+			background-image:url(../images/jt.png);
+			background-size:100%;
+			background-repeat:no-repeat;
+			&+span{
+				margin-top: size(-20,rem);
+			}   
+		}
 	}
 }
 //about
 .page02,.page03,.page04,.page05,.page06,.page07,.page08{
-	>.title{margin-bottom:size(44,rem); }
+	 .title{margin-bottom:size(44,rem); }
 }
 .page02{
 	//background-image: url('../images/page02.jpg');
@@ -425,4 +443,54 @@ $p02w:size(555,rem);
 		width: size(224,rem); margin: auto;
 	}
 	
+}
+.mask{
+	position:fixed;
+	left: 100%;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color:#fff ;
+	z-index: 999;
+	transform: translateX(-100%);
+	transition:all .3s linear;
+	& > ul{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top:50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 40px;
+		margin: auto;
+		&>li{
+			float: left;
+			height:100%;
+			width: 20%;
+			background-color:#71C142;
+			margin-right:13%;
+			transform-origin: center bottom ; 
+			animation: scaleY .8s linear infinite;
+			@for $i from 1 to 4{
+				&:nth-of-type(#{$i}){
+					animation-delay: -.3*$i+s;
+				}
+			
+			}
+			
+		}
+	}
+	&[data-loading=true]{
+		opacity: 0;
+		transform: translateX(0%);
+		pointer-events: none;
+	}
+}
+@keyframes scaleY{
+	0%,100%{
+		transform: scaleY(1)
+	}
+	50%{
+		transform: scaleY(.3)
+	}
 }

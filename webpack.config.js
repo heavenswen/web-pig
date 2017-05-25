@@ -7,8 +7,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const release = process.env.NODE_ENV === 'production' ? '/pig2/' : '/'//域名文件夹
-const myHost = "127.0.0.1"
+const release = process.env.NODE_ENV === 'production' ? '/pig/' : '/'//域名文件夹
+const myHost = "192.168.4.30"
 //页面对应路口
 const entries = {}
 //入口对象集
@@ -174,7 +174,7 @@ glob.sync("./src/pages/**/*.{ejs,html}").forEach(path => {
     filename: filename + ".html",//文件名
     template: path,
     inject: 'body',
-    favicon: './src/assets/img/logo.png',
+    favicon: './src/assets/images/c7.png',
     hash: process.env.NODE_ENV === 'production',
     env: process.env.NODE_ENV === 'production',//HtmlWebpackPlugin.options.env 非打包时的处理
     chunks: ['vendors', chunk] //chunk

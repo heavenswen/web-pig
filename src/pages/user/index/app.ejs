@@ -23,13 +23,16 @@
         <div class="box p01-2 box-center" data-animate=' animated zoomIn delay1' data-again="animated pulse loop">
           <img class='swiper-lazy' data-src="<%= require(`assets/images/c1.png`) %>" alt="乌猪">
         </div>
-        <div class="box p01-3 text-center" data-animate='animated fadeInUp delay2' data-again='animated fadeIn loop'>
-          <a class="goto">》</a>
-        </div>
+        <a class="goto" data-animate='animated fadeInUp delay2'>
+            <span class="animated fadeIn loop "></span>
+            <span class="animated fadeIn loop delay1"></span>
+            <!--<span class="animated fadeIn loop delay2"></span>-->
+        </a>
       </section>
       <!--02-->
       <section class="swiper-slide  page02 " data-history="2">
         <div class="swiper-lazy-preloader"></div>
+
         <div class="animated loop xy"></div>
         <h2 class="title p02-1" data-animate='animated zoomIn'>自我介绍</h2>
         <div class="box p02-2 box-center" data-animate='animated zoomIn delay1' data-again="animated pulse loop">
@@ -38,11 +41,12 @@
         <p class='p02-3 container font-plus bold ' data-animate=' animated bounceInUp delay2'>
           乌猪，又名槐猪，中国优良品种猪之一，闽西龙岩上杭有着1000多年的养殖历史，福建省唯一列入“国家级畜禽品种资源保护名录”的地方优良品种猪。
         </p>
-        <div class="animated loop xy"></div>
+
       </section>
       <!--03-->
       <section class="swiper-slide page03 " data-history="3">
         <div class="swiper-lazy-preloader"></div>
+        <div class="animated loop xy"></div>
         <h2 class="title p03-1" data-animate='animated swing'>招待贵宾 上等菜肴</h2>
         <div class="box p03-2 box-center" data-animate='animated zoomIn delay1' data-again="animated pulse loop">
           <img class='swiper-lazy' data-src="<%= require(`assets/images/c3-1.png`) %>" alt="乌猪肉">
@@ -120,6 +124,7 @@
       </section>
       <section class="swiper-slide page07 " data-history="7">
         <div class="swiper-lazy-preloader"></div>
+        <div class="animated loop xy"></div>
         <h2 class=" title p7-1" data-animate='animated rollIn'>只需2999元
           <span class="block">
             即可认筹
@@ -143,22 +148,30 @@
       <section class="swiper-slide page08 " data-history="8">
         <div class="swiper-lazy-preloader"></div>
         <div class="animated loop xy"></div>
-
-        <h2 class=" title p08-1" data-animate='animated bounceInUp '>支付联系方式</h2>
-        <ul class="container list">
-          <li data-animate='animated  bounceInUp '><i></i><span>可以支付</span></li>
-          <li data-animate='animated  bounceInUp '><i></i><span>支付后，直接通过银联冻结，保障客户资金安全</span></li>
-          <li data-animate='animated  bounceInUp '><i></i><span>丘旭辉先生</span></li>
-          <li data-animate='animated  bounceInUp '><i></i><a href='tel:18006007838'>18006007838</a></li>
-        </ul>
-        <div class="box img " data-animate='animated bounceInUp '>
-          <img class=' swiper-lazy' data-src="<%= require(`assets/images/qr.png`) %>" alt="QR">
+        <div class="container" data-animate='animated bounceInUp '>
+          <h2 class=" title p08-1">支付联系方式</h2>
+          <ul class=" list">
+            <li><i></i><span>可以支付</span></li>
+            <li><i></i><span>支付后，直接通过银联冻结，保障客户资金安全</span></li>
+            <li><i></i><span>丘旭辉先生</span></li>
+            <li><i></i><a href='tel:18006007838'>18006007838</a></li>
+          </ul>
+          <div class="box img ">
+            <img class=' swiper-lazy' data-src="<%= require(`assets/images/qr.png`) %>" alt="QR">
+          </div>
         </div>
       </section>
 
     </div>
     <!-- 如果需要分页器 -->
     <!--<div class="swiper-pagination"></div>-->
+  </div>
+  <div class="mask" id='mask'>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </body>
 

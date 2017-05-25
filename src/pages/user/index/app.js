@@ -135,6 +135,13 @@ import Swiper from "swiper"
     }, false)
   }
 
-
+  //loading end
+  window.onload = function () {
+    let mask = document.querySelector("#mask")
+    mask.dataset.loading = 'true';
+    setTimeout(function () {
+      mask.parentNode.removeChild(mask);
+    }, 300)
+  }
 
 })()
