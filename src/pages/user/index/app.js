@@ -51,7 +51,7 @@ import Swiper from "swiper"
   //删除样式
   function removeClass() {
     let o = this
-    o.style.opacity = 1;
+    // o.style.opacity = 1;
     initAnimate(o)
   }
   //去除动画样式 去除 animated 后的样式
@@ -86,7 +86,6 @@ import Swiper from "swiper"
     }
 
   }
-  let status = ''
   const mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     // 如果需要分页器
@@ -103,10 +102,12 @@ import Swiper from "swiper"
         pageAddClass(index)
       }
     },
-    onTransitionEnd(swiper) {
+    onSlideChangeStart(swiper) {
+
       let index = swiper.activeIndex + 1
       let index_p = swiper.previousIndex + 1 //上一屏
-      if (index_p == index) return
+      console.log(index , index_p)
+      if (index_p == index ) return;
       //addClass 
       pageAddClass(index);
       //init animate the prev swiper 

@@ -318,6 +318,7 @@ $p02w:size(555,rem);
 	.p01-3 {
 		margin-top: size(45,rem);
 		font-size: size(40,rem);
+
 	}
 	.goto{
 		position: absolute;
@@ -428,7 +429,7 @@ $p02w:size(555,rem);
 .page08{
 	[data-animate]{
 		//animation-delay:-8s;
-		animation-duration:2s; 
+		//animation-duration:2s; 
 	}
 	li{
 		margin-bottom: size(50,rem);
